@@ -11,13 +11,11 @@ module.exports = {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
 
-//   devServer: {
-//     historyApiFallback: true,
-//     inline: true,
-//     port: 3000,
-//     hot: true,
-//     publicPath: '/',
-//   },
+  devServer: {
+    historyApiFallback: true,
+    port: 3000,
+    hot: true
+  },
   
   module: {
     rules: [
