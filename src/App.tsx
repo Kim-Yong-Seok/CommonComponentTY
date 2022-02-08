@@ -1,5 +1,12 @@
 import React from 'react';
 
-const App = () => <>TEST</>;
+const App = () => {
+
+	return (
+		<>
+			<img src="/images/test.png"></img>
+		</>
+	)
+}
 
 export default App;

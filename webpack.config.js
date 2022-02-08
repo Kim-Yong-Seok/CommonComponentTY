@@ -23,21 +23,28 @@ module.exports = {
         test: /\.tsx?$/,
         use: ['babel-loader', 'ts-loader'],
       },
+      {
+        test: /\.(png|jpg|svg)$/,
+        loader: 'file-loader',
+        options: {
+          name: 'images/[name].[ext]'
+        }
+      }
     ],
   },
   
   output: {
     path: path.join(__dirname, '/dist'),
-    filename: 'bundle.js',
+    filename: 'bundle.js'
   },
 
   plugins: [
-	new webpack.ProvidePlugin({
-      React: 'react',
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/index.html',
-    }),
-    new webpack.HotModuleReplacementPlugin()
-  ],
+    new webpack.ProvidePlugin({
+        React: 'react',
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/index.html',
+      }),
+      new webpack.HotModuleReplacementPlugin()
+    ],
 };
